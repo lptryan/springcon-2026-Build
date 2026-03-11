@@ -5,26 +5,47 @@ import ByTheNumbersSection from "@/components/springcon/ByTheNumbersSection";
 import ExperienceSection from "@/components/springcon/ExperienceSection";
 import ChoosePathSection from "@/components/springcon/ChoosePathSection";
 import FeaturedSpeakersSection from "@/components/springcon/FeaturedSpeakersSection";
+import VenueTravelSection from "@/components/springcon/VenueTravelSection";
 import FAQSection from "@/components/springcon/FAQSection";
 import RegisterSection from "@/components/springcon/RegisterSection";
 import SponsorsSection from "@/components/springcon/SponsorsSection";
 import CTASection from "@/components/springcon/CTASection";
 import Footer from "@/components/springcon/Footer";
+import AnimatedSection from "@/components/springcon/AnimatedSection";
 
 export default function Index() {
   return (
     <div className="bg-background min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <WhyAttendSection />
-      <ByTheNumbersSection />
-      <ExperienceSection />
-      <ChoosePathSection />
-      <FeaturedSpeakersSection />
-      <FAQSection />
-      <RegisterSection />
-      <SponsorsSection />
-      <CTASection />
+      <AnimatedSection>
+        <WhyAttendSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <ByTheNumbersSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <ExperienceSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <ChoosePathSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <FeaturedSpeakersSection />
+      </AnimatedSection>
+      <VenueTravelSection />
+      <AnimatedSection>
+        <FAQSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <RegisterSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <SponsorsSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <CTASection />
+      </AnimatedSection>
       <Footer />
     </div>
   );
