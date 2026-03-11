@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const sections = [
   { id: "why-attend", label: "Why Attend" },
@@ -27,6 +28,12 @@ export default function Navbar() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
+  // Lock body scroll when mobile nav is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   const linkClass = (id: string) =>
     `text-sm font-medium transition-colors ${activeSection === id ? "text-[hsl(var(--spring-green))]" : "text-foreground hover:text-[hsl(var(--spring-green))]"}`;
 
@@ -53,20 +60,60 @@ export default function Navbar() {
           </button>
         </div>
 
-        <button className="lg:hidden text-foreground p-2" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        <button className="lg:hidden text-foreground p-2 relative z-50" onClick={() => setMobileOpen(!mobileOpen)}>
+          <AnimatePresence mode="wait">
+            {mobileOpen ? (
+              <motion.span key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <X size={24} />
+              </motion.span>
+            ) : (
+              <motion.span key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <Menu size={24} />
+              </motion.span>
+            )}
+          </AnimatePresence>
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="lg:hidden bg-background/95 backdrop-blur-md border-t border-foreground/10 px-5 py-6 flex flex-col gap-4">
-          {sections.map(({ id, label }) => (
-            <a key={id} href={`#${id}`} className={`text-base font-medium py-2 ${activeSection === id ? "text-[hsl(var(--spring-green))]" : "text-foreground"}`} onClick={() => setMobileOpen(false)}>{label}</a>
-          ))}
-          <button className="w-full py-3 rounded-xl text-foreground text-sm font-medium gradient-blue-purple">Apply to be a Speaker!</button>
-          <button className="w-full py-3 rounded-lg text-foreground text-sm font-semibold gradient-green-blue">Click to Register</button>
-        </div>
-      )}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            className="lg:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-xl border-t border-foreground/10 px-5 pt-8 pb-6 flex flex-col gap-1 overflow-y-auto"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {sections.map(({ id, label }, i) => (
+              <motion.a
+                key={id}
+                href={`#${id}`}
+                className={`text-lg font-medium py-3 px-2 rounded-lg transition-colors ${activeSection === id ? "text-[hsl(var(--spring-green))]" : "text-foreground"}`}
+                onClick={() => setMobileOpen(false)}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.06 * i, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {label}
+              </motion.a>
+            ))}
+
+            <motion.div
+              className="flex flex-col gap-3 mt-6 pt-6 border-t border-foreground/10"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <button className="w-full py-3.5 rounded-xl text-foreground text-sm font-medium gradient-blue-purple">
+                Apply to be a Speaker!
+              </button>
+              <button className="w-full py-3.5 rounded-lg text-foreground text-sm font-semibold gradient-green-blue">
+                Click to Register
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
