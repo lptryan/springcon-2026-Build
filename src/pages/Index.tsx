@@ -40,6 +40,9 @@ export default function Index() {
       </AnimatedSection>
       <VenueTravelSection />
       <AnimatedSection>
+        <HighlightsSection />
+      </AnimatedSection>
+      <AnimatedSection>
         <FAQSection />
       </AnimatedSection>
       <AnimatedSection>
