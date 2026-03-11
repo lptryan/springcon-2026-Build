@@ -1,4 +1,5 @@
 import { Briefcase, Zap, Award, Globe } from "lucide-react";
+import whyAttendBg from "@/assets/why-attend-bg.jpg";
 
 const reasons = [
   {
@@ -34,16 +35,15 @@ export default function WhyAttendSection() {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/1091f9b71b1091d11f2f47b1d3c2c7ad121b7157?width=3456')`,
+          backgroundImage: `url('${whyAttendBg}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
-      <div className="absolute inset-0 -z-10 bg-black/40" />
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h2 className="font-poppins font-medium text-4xl md:text-5xl text-foreground mb-4">
             Why Attend?
           </h2>
@@ -59,10 +59,10 @@ export default function WhyAttendSection() {
             return (
               <div
                 key={idx}
-                className="glass-dark rounded-2xl overflow-hidden flex flex-row h-full"
+                className="rounded-2xl overflow-hidden flex flex-row h-full"
               >
-                {/* Content */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center min-w-0">
+                {/* Content - semi-transparent to show background */}
+                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center min-w-0 bg-card/60 backdrop-blur-sm">
                   <div className="w-12 h-12 rounded-xl gradient-blue-purple flex items-center justify-center mb-4">
                     <Icon className="text-foreground" size={24} />
                   </div>
