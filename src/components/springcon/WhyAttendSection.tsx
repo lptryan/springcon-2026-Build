@@ -30,16 +30,15 @@ const reasons = [
 
 export default function WhyAttendSection() {
   return (
-    <section id="why-attend" className="relative py-20 md:py-32 px-5">
-      {/* Background */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url('${whyAttendBg}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+    <section
+      id="why-attend"
+      className="relative py-20 md:py-32 px-5"
+      style={{
+        backgroundImage: `url('${whyAttendBg}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
