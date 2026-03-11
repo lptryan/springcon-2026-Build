@@ -8,6 +8,7 @@ import FeaturedSpeakersSection from "@/components/springcon/FeaturedSpeakersSect
 import EventScheduleSection from "@/components/springcon/EventScheduleSection";
 import VenueTravelSection from "@/components/springcon/VenueTravelSection";
 import FAQSection from "@/components/springcon/FAQSection";
+import HighlightsSection from "@/components/springcon/HighlightsSection";
 import RegisterSection from "@/components/springcon/RegisterSection";
 import SponsorsSection from "@/components/springcon/SponsorsSection";
 import CTASection from "@/components/springcon/CTASection";
