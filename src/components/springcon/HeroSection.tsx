@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(270deg, rgba(152,16,250,0.6) 0%, rgba(21,93,252,0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/2b15ed4b3be9f28b6ea3047c28352ec75ba7f6a0?width=1600')`,
+          backgroundImage: `url('${heroBg}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
