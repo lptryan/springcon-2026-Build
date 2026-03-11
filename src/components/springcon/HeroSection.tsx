@@ -24,7 +24,7 @@ function useCountdown(targetDate: Date) {
 }
 
 export default function HeroSection() {
-  const { days, hours, minutes, seconds } = useCountdown(new Date("2026-10-16T09:00:00"));
+  const { days, hours, minutes, seconds } = useCountdown(new Date("2026-04-20T09:00:00"));
 
   const timeUnits = [
     { value: days, label: "Days" },
