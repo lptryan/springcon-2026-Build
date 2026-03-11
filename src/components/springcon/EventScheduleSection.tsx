@@ -4,7 +4,7 @@ import { Clock, MapPin } from "lucide-react";
 const days = [
   {
     label: "Day 1",
-    date: "October 16, 2026",
+    date: "April 20, 2026",
     sessions: [
       { time: "8:00 AM", title: "Registration & Check-In", location: "Main Lobby", type: "general", duration: "1 hr" },
       { time: "9:00 AM", title: "Opening Keynote: The Future of Real Estate", location: "Grand Ballroom", type: "keynote", duration: "1.5 hrs" },
@@ -19,7 +19,7 @@ const days = [
   },
   {
     label: "Day 2",
-    date: "October 17, 2026",
+    date: "April 21, 2026",
     sessions: [
       { time: "8:30 AM", title: "Morning Workshops", location: "Multiple Rooms", type: "general", duration: "1.5 hrs" },
       { time: "10:00 AM", title: "Keynote: AI-Powered Real Estate", location: "Grand Ballroom", type: "keynote", duration: "1 hr" },
