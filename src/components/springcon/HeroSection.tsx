@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroLogo from "@/assets/lpt-springcon-hero-logo.png";
 
 function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
