@@ -1,6 +1,11 @@
+import ctaBg from "@/assets/cta-bg.jpg";
+
 export default function CTASection() {
   return (
-    <section className="relative py-20 md:py-32 px-5">
+    <section
+      className="relative py-20 md:py-32 px-5 bg-cover bg-center"
+      style={{ backgroundImage: `url(${ctaBg})` }}
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-poppins font-bold italic text-5xl md:text-6xl lg:text-7xl text-foreground mb-8">
           Ready to Ascend Your Career?
