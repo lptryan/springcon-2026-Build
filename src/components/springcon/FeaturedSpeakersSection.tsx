@@ -43,7 +43,7 @@ const speakers = [
     company: "Pinnacle Realty Partners",
     title: "Growth Consultant",
     companyBadge: "Pinnacle",
-    time: "Sunday, Oct 19 • 11:00 – 11:40 AM",
+    time: "Wednesday, Apr 22 • 11:00 – 11:40 AM",
     sessionTitle: "Scaling Your Team from 5 to 50: Lessons from the Trenches",
     bio: "Built one of the fastest-growing real estate teams in the Southeast, known for her data-driven approach to team building and culture.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=764&h=900&fit=crop",

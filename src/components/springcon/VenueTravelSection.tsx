@@ -167,7 +167,7 @@ export default function VenueTravelSection() {
                     <span className="text-muted-foreground text-base">/night</span>
                   </div>
                   <p className="text-[hsl(var(--azure))] font-medium text-sm mb-6">
-                    Use code: <span className="font-bold">CONF2025</span>
+                    Use code: <span className="font-bold">SPRING2026</span>
                   </p>
                   <button className="px-8 py-3 rounded-xl gradient-green-blue text-foreground font-semibold hover:opacity-90 transition-opacity">
                     Book Hotel Package

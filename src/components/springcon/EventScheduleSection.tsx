@@ -19,7 +19,7 @@ const days = [
   },
   {
     label: "Day 2",
-    date: "October 17, 2026",
+    date: "April 21, 2026",
     sessions: [
       { time: "8:30 AM", title: "Morning Workshops", location: "Multiple Rooms", type: "general", duration: "1.5 hrs" },
       { time: "10:00 AM", title: "Keynote: AI-Powered Real Estate", location: "Grand Ballroom", type: "keynote", duration: "1 hr" },

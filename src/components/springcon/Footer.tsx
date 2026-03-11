@@ -123,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom Links */}
         <div className="border-t border-foreground/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Annual Conference. All rights reserved.</p>
+          <p>© 2026 Annual Conference. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>

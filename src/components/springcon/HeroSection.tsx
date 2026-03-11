@@ -61,9 +61,9 @@ export default function HeroSection() {
 
         {/* Date & Location */}
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mb-8 text-foreground/90 font-poppins font-medium text-base md:text-xl">
-          <span>October 16-17, 2026</span>
+          <span>April 20-22, 2026</span>
           <span className="hidden sm:block w-px h-5 bg-foreground/40" />
-          <span>Orlando World Center Marriott</span>
+          <span>LPT Realty HQ</span>
         </div>
 
         {/* Countdown Timer */}
