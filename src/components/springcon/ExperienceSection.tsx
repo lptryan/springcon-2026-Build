@@ -1,33 +1,37 @@
-import { BookOpen, Lightbulb, Users, Award } from "lucide-react";
+import { GraduationCap, Lightbulb, Users, Trophy } from "lucide-react";
 
 const experiences = [
   {
-    icon: BookOpen,
+    icon: GraduationCap,
     title: "Expert-Led Training",
     description: "Learn from industry veterans with decades of combined experience",
+    subdesc: "Learn from industry veterans with decades of combined experience",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/09bfa513de9db6fde3267b45f385ce4db20efbca?width=780",
-    gradient: "from-[#2B7FFF] to-[#4F39F6]",
+    iconBg: "bg-[#2B7FFF]",
   },
   {
     icon: Lightbulb,
     title: "Innovation Showcase",
     description: "Discover cutting-edge solutions and emerging technologies",
+    subdesc: "Discover cutting-edge solutions and emerging technologies",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/0da84379146056db7dc59cf20e052f61688d32d1?width=780",
-    gradient: "from-[#FF6900] to-[#FB2C36]",
+    iconBg: "bg-[#FF6900]",
   },
   {
     icon: Users,
     title: "Networking Opportunities",
     description: "Build meaningful connections with peers and industry leaders",
+    subdesc: "Discover cutting-edge solutions and emerging technologies",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/4b6cdc66f7d2bccd972858841f806c4a098f4ff7?width=780",
-    gradient: "from-[#AD46FF] to-[#F6339A]",
+    iconBg: "bg-[#F6339A]",
   },
   {
-    icon: Award,
+    icon: Trophy,
     title: "Certification Programs",
     description: "Earn recognized certifications to advance your career",
+    subdesc: "Earn recognized certifications to advance your career",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/1b570e287cee2af6cf675bea0275d2b91ad2b809?width=780",
-    gradient: "from-[#00C950] to-[#00BC7D]",
+    iconBg: "bg-[#00C950]",
   },
 ];
 
@@ -47,51 +51,95 @@ export default function ExperienceSection() {
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="font-poppins font-medium text-4xl md:text-5xl text-foreground mb-4">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="font-poppins font-medium text-3xl md:text-5xl text-foreground mb-4">
             What You'll Experience
           </h2>
-          <p className="font-poppins text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
+          <p className="font-poppins text-base md:text-xl text-foreground/80 max-w-2xl mx-auto">
             Comprehensive learning and growth opportunities
           </p>
-          <div className="w-56 h-px bg-foreground mx-auto mt-8" />
+          <div className="w-40 md:w-56 h-px bg-foreground mx-auto mt-6 md:mt-8" />
         </div>
 
-        {/* Experience Cards */}
-        <div className="space-y-8">
+        {/* Desktop: 2x2 bento grid */}
+        <div className="hidden md:grid grid-cols-2 gap-6">
+          {/* Card 1: text-left, image-right */}
+          <div className="rounded-2xl overflow-hidden glass-dark flex flex-row">
+            <div className="flex-1 p-8 flex flex-col justify-center">
+              <div className={`w-12 h-12 rounded-xl ${experiences[0].iconBg} flex items-center justify-center mb-4`}>
+                <GraduationCap className="text-foreground" size={24} />
+              </div>
+              <h3 className="text-2xl font-semibold text-foreground mb-3">{experiences[0].title}</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed mb-2">{experiences[0].description}</p>
+              <p className="text-foreground/70 text-sm leading-relaxed">{experiences[0].subdesc}</p>
+            </div>
+            <div className="w-52 flex-shrink-0">
+              <img src={experiences[0].image} alt={experiences[0].title} className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Card 2: text-left, image-right */}
+          <div className="rounded-2xl overflow-hidden glass-dark flex flex-row">
+            <div className="flex-1 p-8 flex flex-col justify-center">
+              <div className={`w-12 h-12 rounded-xl ${experiences[1].iconBg} flex items-center justify-center mb-4`}>
+                <Lightbulb className="text-foreground" size={24} />
+              </div>
+              <h3 className="text-2xl font-semibold text-foreground mb-3">{experiences[1].title}</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed mb-2">{experiences[1].description}</p>
+              <p className="text-foreground/70 text-sm leading-relaxed">{experiences[1].subdesc}</p>
+            </div>
+            <div className="w-52 flex-shrink-0">
+              <img src={experiences[1].image} alt={experiences[1].title} className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Card 3: image-left, text-right */}
+          <div className="rounded-2xl overflow-hidden glass-dark flex flex-row">
+            <div className="w-52 flex-shrink-0">
+              <img src={experiences[2].image} alt={experiences[2].title} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex-1 p-8 flex flex-col justify-center">
+              <div className={`w-12 h-12 rounded-xl ${experiences[2].iconBg} flex items-center justify-center mb-4`}>
+                <Users className="text-foreground" size={24} />
+              </div>
+              <h3 className="text-2xl font-semibold text-foreground mb-3">{experiences[2].title}</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed mb-2">{experiences[2].description}</p>
+              <p className="text-foreground/70 text-sm leading-relaxed">{experiences[2].subdesc}</p>
+            </div>
+          </div>
+
+          {/* Card 4: image-left, text-right */}
+          <div className="rounded-2xl overflow-hidden glass-dark flex flex-row">
+            <div className="w-52 flex-shrink-0">
+              <img src={experiences[3].image} alt={experiences[3].title} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex-1 p-8 flex flex-col justify-center">
+              <div className={`w-12 h-12 rounded-xl ${experiences[3].iconBg} flex items-center justify-center mb-4`}>
+                <Trophy className="text-foreground" size={24} />
+              </div>
+              <h3 className="text-2xl font-semibold text-foreground mb-3">{experiences[3].title}</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed mb-2">{experiences[3].description}</p>
+              <p className="text-foreground/70 text-sm leading-relaxed">{experiences[3].subdesc}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: stacked cards with icon, text, then image below */}
+        <div className="md:hidden space-y-6">
           {experiences.map((exp, idx) => {
             const Icon = exp.icon;
-            const isReverse = idx % 2 === 1;
-
             return (
-              <div
-                key={idx}
-                className={`flex flex-col ${
-                  isReverse ? "lg:flex-row-reverse" : "lg:flex-row"
-                } gap-6 items-center`}
-              >
-                {/* Image */}
-                <div className="lg:flex-1 w-full lg:w-auto">
-                  <div className={`bg-gradient-to-br ${exp.gradient} rounded-2xl overflow-hidden h-96 shadow-lg`}>
-                    <img
-                      src={exp.image}
-                      alt={exp.title}
-                      className="w-full h-full object-cover opacity-90"
-                    />
+              <div key={idx} className="rounded-2xl overflow-hidden glass-dark">
+                <div className="p-6">
+                  <div className={`w-12 h-12 rounded-xl ${exp.iconBg} flex items-center justify-center mb-4`}>
+                    <Icon className="text-foreground" size={24} />
                   </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{exp.title}</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-1">{exp.description}</p>
+                  <p className="text-foreground/70 text-sm leading-relaxed">{exp.subdesc}</p>
                 </div>
-
-                {/* Content */}
-                <div className="lg:flex-1 flex flex-col justify-center">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2B7FFF] to-[#00B8DB] flex items-center justify-center mb-6">
-                    <Icon className="text-foreground" size={32} />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-medium text-foreground mb-6">
-                    {exp.title}
-                  </h3>
-                  <p className="text-foreground/80 text-xl leading-relaxed mb-8">
-                    {exp.description}
-                  </p>
+                <div className="w-full h-48">
+                  <img src={exp.image} alt={exp.title} className="w-full h-full object-cover" />
                 </div>
               </div>
             );
