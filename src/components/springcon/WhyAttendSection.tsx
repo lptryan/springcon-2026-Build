@@ -77,7 +77,7 @@ export default function WhyAttendSection() {
                 </div>
 
                 {/* Image */}
-                <div className="hidden sm:block w-full sm:w-72 flex-shrink-0">
+                <div className="hidden md:block w-full md:w-72 flex-shrink-0 h-48 md:h-auto">
                   <img
                     src={reason.image}
                     alt={reason.title}
