@@ -1,14 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/springcon/Navbar";
+import HeroSection from "@/components/springcon/HeroSection";
+import WhyAttendSection from "@/components/springcon/WhyAttendSection";
+import ByTheNumbersSection from "@/components/springcon/ByTheNumbersSection";
+import ExperienceSection from "@/components/springcon/ExperienceSection";
+import ChoosePathSection from "@/components/springcon/ChoosePathSection";
+import FeaturedSpeakersSection from "@/components/springcon/FeaturedSpeakersSection";
+import FAQSection from "@/components/springcon/FAQSection";
+import RegisterSection from "@/components/springcon/RegisterSection";
+import SponsorsSection from "@/components/springcon/SponsorsSection";
+import CTASection from "@/components/springcon/CTASection";
+import Footer from "@/components/springcon/Footer";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-background min-h-screen overflow-x-hidden">
+      <Navbar />
+      <HeroSection />
+      <WhyAttendSection />
+      <ByTheNumbersSection />
+      <ExperienceSection />
+      <ChoosePathSection />
+      <FeaturedSpeakersSection />
+      <FAQSection />
+      <RegisterSection />
+      <SponsorsSection />
+      <CTASection />
+      <Footer />
     </div>
   );
-};
-
-export default Index;
+}

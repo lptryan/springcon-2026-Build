@@ -1,0 +1,94 @@
+import { Briefcase, Zap, Award, Globe } from "lucide-react";
+
+const reasons = [
+  {
+    icon: Briefcase,
+    title: "Career Growth",
+    description: "Accelerate your professional development with insights from industry leaders and hands-on workshops",
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/4b62b8989d3f31d605a5134bb997c6444d21778b?width=560",
+  },
+  {
+    icon: Zap,
+    title: "Stay Ahead",
+    description: "Discover the latest trends and technologies before they become mainstream",
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/91bc07f3c5f5a1f59163202609baa9e8b3a3edb9?width=560",
+  },
+  {
+    icon: Award,
+    title: "Exclusive Access",
+    description: "Get early access to new products, tools, and exclusive partnership opportunities",
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/995f7e16ce7f2431b930d66d463a5ae6294d884a?width=560",
+  },
+  {
+    icon: Globe,
+    title: "Global Network",
+    description: "Connect with professionals from over 50 countries and expand your global reach",
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/8ea37cc69d72ff4e9a89af67ae2dac1d0e4e27ee?width=560",
+  },
+];
+
+export default function WhyAttendSection() {
+  return (
+    <section id="why-attend" className="relative py-20 md:py-32 px-5">
+      {/* Background */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/1091f9b71b1091d11f2f47b1d3c2c7ad121b7157?width=3456')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="absolute inset-0 -z-10 bg-black/40" />
+
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="font-poppins font-medium text-4xl md:text-5xl text-foreground mb-4">
+            Why Attend?
+          </h2>
+          <p className="font-poppins text-xl text-foreground/90 max-w-2xl mx-auto">
+            Transform your business and career in just three days
+          </p>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reasons.map((reason, idx) => {
+            const Icon = reason.icon;
+            return (
+              <div
+                key={idx}
+                className="glass-dark rounded-2xl overflow-hidden flex flex-col sm:flex-row h-full"
+              >
+                {/* Content */}
+                <div className="flex-1 p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="w-16 h-16 rounded-2xl gradient-blue-purple flex items-center justify-center mb-6">
+                      <Icon className="text-foreground" size={32} />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-medium text-foreground mb-4">
+                      {reason.title}
+                    </h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      {reason.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Image */}
+                <div className="hidden sm:block w-full sm:w-72 flex-shrink-0">
+                  <img
+                    src={reason.image}
+                    alt={reason.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
