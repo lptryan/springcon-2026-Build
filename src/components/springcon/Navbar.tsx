@@ -33,18 +33,15 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-foreground/10">
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
-        <div className="flex-shrink-0">
+        <a href="#" className="flex-shrink-0" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/8c44e33ca3c588f7ce8beee74b8a8c76f19255de?width=728"
             alt="LPT Realty"
             className="h-14 w-auto"
           />
-        </div>
+        </a>
 
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          <button className="flex items-center gap-1 px-4 py-2 rounded-xl border border-foreground/30 bg-foreground/10 backdrop-blur-sm text-foreground font-bold text-sm">
-            Home <ChevronDown size={16} />
-          </button>
           {sections.map(({ id, label }) => (
             <a key={id} href={`#${id}`} className={linkClass(id)}>{label}</a>
           ))}
