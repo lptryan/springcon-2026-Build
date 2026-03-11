@@ -32,7 +32,7 @@ const speakers = [
     company: "PropTech Innovations",
     title: "Tech Evangelist",
     companyBadge: "PropTech",
-    time: "Saturday, Oct 18 • 2:00 – 2:40 PM",
+    time: "Tuesday, Apr 21 • 2:00 – 2:40 PM",
     sessionTitle: "AI-Powered Real Estate: What Every Agent Needs to Know in 2027",
     bio: "Former Silicon Valley engineer turned PropTech visionary, specializing in AI applications that revolutionize property transactions.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=764&h=900&fit=crop",
