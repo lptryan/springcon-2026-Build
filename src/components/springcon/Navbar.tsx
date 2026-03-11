@@ -78,7 +78,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="lg:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-xl border-t border-foreground/10 px-5 pt-8 pb-6 flex flex-col gap-1 overflow-y-auto"
+            className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background backdrop-blur-xl border-t border-foreground/10 px-5 pt-8 pb-6 flex flex-col gap-1"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
