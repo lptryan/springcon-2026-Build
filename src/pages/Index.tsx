@@ -5,6 +5,7 @@ import ByTheNumbersSection from "@/components/springcon/ByTheNumbersSection";
 import ExperienceSection from "@/components/springcon/ExperienceSection";
 import ChoosePathSection from "@/components/springcon/ChoosePathSection";
 import FeaturedSpeakersSection from "@/components/springcon/FeaturedSpeakersSection";
+import EventScheduleSection from "@/components/springcon/EventScheduleSection";
 import VenueTravelSection from "@/components/springcon/VenueTravelSection";
 import FAQSection from "@/components/springcon/FAQSection";
 import RegisterSection from "@/components/springcon/RegisterSection";
@@ -32,6 +33,9 @@ export default function Index() {
       </AnimatedSection>
       <AnimatedSection>
         <FeaturedSpeakersSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <EventScheduleSection />
       </AnimatedSection>
       <VenueTravelSection />
       <AnimatedSection>
