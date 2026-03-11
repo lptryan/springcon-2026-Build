@@ -30,7 +30,8 @@ export default function HighlightsSection() {
         {/* CTA Button */}
         <a
           href="#register"
-          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-spring-green text-background font-semibold text-base hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-base text-background hover:opacity-90 transition-opacity"
+          style={{ backgroundColor: 'hsl(151, 100%, 50%)' }}
         >
           Register Now <ArrowRight size={18} />
         </a>
