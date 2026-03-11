@@ -59,25 +59,23 @@ export default function WhyAttendSection() {
             return (
               <div
                 key={idx}
-                className="glass-dark rounded-2xl overflow-hidden flex flex-col h-full"
+                className="glass-dark rounded-2xl overflow-hidden flex flex-row h-full"
               >
                 {/* Content */}
-                <div className="flex-1 p-8 flex flex-col justify-between">
-                  <div>
-                    <div className="w-16 h-16 rounded-2xl gradient-blue-purple flex items-center justify-center mb-6">
-                      <Icon className="text-foreground" size={32} />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-medium text-foreground mb-4">
-                      {reason.title}
-                    </h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      {reason.description}
-                    </p>
+                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center min-w-0">
+                  <div className="w-12 h-12 rounded-xl gradient-blue-purple flex items-center justify-center mb-4">
+                    <Icon className="text-foreground" size={24} />
                   </div>
+                  <h3 className="text-xl md:text-2xl font-medium text-foreground mb-3">
+                    {reason.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    {reason.description}
+                  </p>
                 </div>
 
                 {/* Image */}
-                <div className="hidden md:block w-full md:w-72 flex-shrink-0 h-48 md:h-auto">
+                <div className="hidden sm:block w-36 md:w-44 flex-shrink-0">
                   <img
                     src={reason.image}
                     alt={reason.title}
