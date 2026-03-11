@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
