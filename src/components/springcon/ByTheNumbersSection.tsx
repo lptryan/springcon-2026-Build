@@ -1,3 +1,5 @@
+import byTheNumbersBg from "@/assets/by-the-numbers-bg.png";
+
 const stats = [
   {
     number: "5,000+",
@@ -23,17 +25,15 @@ const stats = [
 
 export default function ByTheNumbersSection() {
   return (
-    <section id="by-numbers" className="relative py-20 md:py-32 px-5">
-      {/* Background */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/4c11bdbf03b0439f519af241fefd8d3e439a6a94?width=3456')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-black/60" />
+    <section
+      id="by-numbers"
+      className="relative py-20 md:py-32 px-5"
+      style={{
+        backgroundImage: `url('${byTheNumbersBg}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
