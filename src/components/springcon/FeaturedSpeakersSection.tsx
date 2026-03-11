@@ -10,7 +10,7 @@ const speakers = [
     company: "Legacy Home Team at LPT",
     title: "Head Realtor in Residence",
     companyBadge: "Ylopo",
-    time: "Friday, Oct 17 • 1:40 – 2:20 PM",
+    time: "Monday, Apr 20 • 1:40 – 2:20 PM",
     sessionTitle: "The 30-Day Conversion Comeback: Turn Old Leads Into New Closings",
     bio: "Innovative leader at the intersection of real estate and technology, driving transformation through AI and digital solutions.",
     image: "https://api.builder.io/api/v1/image/assets/TEMP/fd664528c9b287cee03fb8813d75a9d75017044c?width=764",
