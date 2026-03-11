@@ -54,7 +54,7 @@ export default function ByTheNumbersSection() {
               key={idx}
               className="glass-card rounded-3xl p-8 md:p-10 flex flex-col"
             >
-              <div className="text-5xl md:text-6xl font-bold text-gradient-blue-purple mb-6">
+              <div className="text-5xl md:text-6xl font-bold mb-6" style={{ background: 'linear-gradient(90deg, #155DFC 0%, #9810FA 60%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 {stat.number}
               </div>
               <h3 className="text-2xl md:text-3xl font-medium text-foreground/90 mb-4">
