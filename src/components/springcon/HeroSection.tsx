@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroLogo from "@/assets/lpt-springcon-hero-logo.png";
 
 function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
@@ -46,38 +47,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-5 py-32 mt-20">
-        {/* SpringCon logo badge */}
-        <div className="mb-8 max-w-[600px] w-full px-4">
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-2">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/8c44e33ca3c588f7ce8beee74b8a8c76f19255de?width=728"
-                alt="LPT Realty"
-                className="h-12 md:h-16 w-auto filter brightness-0 invert"
-              />
-            </div>
-            <div className="text-center leading-none">
-              <div className="font-poppins font-bold text-[hsl(var(--spring-green))] text-2xl md:text-3xl tracking-widest uppercase">SPRING</div>
-              <div
-                className="font-poppins font-black leading-none"
-                style={{
-                  fontSize: 'clamp(80px, 18vw, 180px)',
-                  background: 'linear-gradient(135deg, #00FF91 0%, #0092FF 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  lineHeight: 1,
-                }}
-              >
-                CON
-              </div>
-              <div className="font-poppins font-black text-foreground leading-none"
-                style={{ fontSize: 'clamp(60px, 14vw, 140px)', lineHeight: 1 }}>
-                2026
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* SpringCon logo */}
+        <img
+          src={heroLogo}
+          alt="LPT Realty SpringCon 2026"
+          className="w-[280px] sm:w-[400px] md:w-[550px] lg:w-[650px] h-auto mb-8"
+        />
 
         {/* Tagline */}
         <h1 className="font-poppins font-bold text-foreground text-xl md:text-3xl lg:text-4xl tracking-wide mb-4 max-w-3xl">
