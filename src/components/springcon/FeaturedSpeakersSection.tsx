@@ -159,7 +159,7 @@ export default function FeaturedSpeakersSection() {
                   <img
                     src={speaker.image}
                     alt={speaker.name}
-                    className="w-full h-full object-cover min-h-[300px]"
+                    className="w-full h-full object-cover object-top min-h-[300px] lg:min-h-[450px]"
                   />
                 </div>
 
