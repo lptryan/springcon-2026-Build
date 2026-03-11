@@ -181,20 +181,20 @@ export default function VenueTravelSection() {
         {/* Newsletter */}
         <AnimatedSection delay={0.4}>
           <div className="glass-card rounded-3xl p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h3 className="font-poppins font-medium text-2xl md:text-3xl text-foreground mb-4">
-              Stay in the Know
+            <h3 className="font-poppins font-medium text-2xl md:text-3xl text-[hsl(var(--spring-green))] mb-4">
+              Stay in the Loop
             </h3>
             <p className="text-muted-foreground text-base mb-8 max-w-lg mx-auto">
-              Sign up for our newsletter to receive updates on product releases, special offers, and company news.
+              Subscribe to get updates on speakers, sessions, and exclusive offers
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-xl bg-foreground/10 border border-foreground/10 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/30"
+                className="flex-1 px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
               />
-              <button className="px-6 py-3 rounded-xl gradient-green-blue text-foreground font-semibold hover:opacity-90 transition-opacity whitespace-nowrap">
-                Sign Up
+              <button className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity whitespace-nowrap">
+                Subscribe
               </button>
             </div>
           </div>

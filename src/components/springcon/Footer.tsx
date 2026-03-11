@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-foreground/10 bg-background">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-8 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-8 mb-12">
           {/* About */}
           <div className="md:col-span-1">
             <img
