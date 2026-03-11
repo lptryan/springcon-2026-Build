@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-foreground/10">
+      <nav className="fixed top-0 left-0 right-0 z-[60] backdrop-blur-md bg-black/20 border-b border-foreground/10">
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
           <a href="#" className="flex-shrink-0" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
