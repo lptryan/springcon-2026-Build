@@ -59,7 +59,7 @@ export default function WhyAttendSection() {
             return (
               <div
                 key={idx}
-                className="glass-dark rounded-2xl overflow-hidden flex flex-col sm:flex-row h-full"
+                className="glass-dark rounded-2xl overflow-hidden flex flex-col h-full"
               >
                 {/* Content */}
                 <div className="flex-1 p-8 flex flex-col justify-between">
@@ -77,7 +77,7 @@ export default function WhyAttendSection() {
                 </div>
 
                 {/* Image */}
-                <div className="hidden sm:block w-full sm:w-72 flex-shrink-0">
+                <div className="hidden md:block w-full md:w-72 flex-shrink-0 h-48 md:h-auto">
                   <img
                     src={reason.image}
                     alt={reason.title}

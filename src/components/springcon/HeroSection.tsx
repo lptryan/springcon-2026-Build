@@ -1,4 +1,36 @@
+import { useState, useEffect } from "react";
+
+function useCountdown(targetDate: Date) {
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
+
+  function getTimeLeft(target: Date) {
+    const diff = Math.max(0, target.getTime() - Date.now());
+    return {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / (1000 * 60)) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+    };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(getTimeLeft(targetDate)), 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return timeLeft;
+}
+
 export default function HeroSection() {
+  const { days, hours, minutes, seconds } = useCountdown(new Date("2026-10-16T09:00:00"));
+
+  const timeUnits = [
+    { value: days, label: "Days" },
+    { value: hours, label: "Hours" },
+    { value: minutes, label: "Minutes" },
+    { value: seconds, label: "Seconds" },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -52,10 +84,29 @@ export default function HeroSection() {
         </h1>
 
         {/* Date & Location */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mb-10 text-foreground/90 font-poppins font-medium text-base md:text-xl">
-          <span>October 16-17, 2025</span>
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mb-8 text-foreground/90 font-poppins font-medium text-base md:text-xl">
+          <span>October 16-17, 2026</span>
           <span className="hidden sm:block w-px h-5 bg-foreground/40" />
           <span>Orlando World Center Marriott</span>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="flex items-center gap-3 sm:gap-5 mb-10">
+          {timeUnits.map((unit, idx) => (
+            <div key={unit.label} className="flex items-center gap-3 sm:gap-5">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl glass-card flex items-center justify-center">
+                  <span className="font-poppins font-bold text-2xl sm:text-3xl text-foreground">
+                    {String(unit.value).padStart(2, "0")}
+                  </span>
+                </div>
+                <span className="text-foreground/70 text-xs sm:text-sm font-medium mt-2">{unit.label}</span>
+              </div>
+              {idx < timeUnits.length - 1 && (
+                <span className="font-poppins font-bold text-2xl sm:text-3xl text-foreground/50 -mt-5">:</span>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* CTA Button */}

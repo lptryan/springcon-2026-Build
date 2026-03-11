@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-foreground/10 bg-background">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-8 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-8 mb-12">
           {/* About */}
           <div className="md:col-span-1">
             <img
@@ -104,16 +104,16 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="border-t border-foreground/10 py-12 mb-12">
           <div className="text-center mb-8">
-            <h4 className="text-foreground font-medium text-xl mb-2">Stay in the Loop</h4>
+            <h4 className="font-poppins font-medium text-xl text-[hsl(var(--spring-green))] mb-2">Stay in the Loop</h4>
             <p className="text-muted-foreground text-sm mb-6">
               Subscribe to get updates on speakers, sessions, and exclusive offers
             </p>
           </div>
-          <div className="max-w-md mx-auto flex gap-3">
+          <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-xl bg-gray-600/25 border border-foreground/10 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-foreground/30"
+              className="flex-1 px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
             />
             <button className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity whitespace-nowrap">
               Subscribe
