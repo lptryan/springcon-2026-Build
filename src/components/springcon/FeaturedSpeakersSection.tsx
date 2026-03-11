@@ -21,7 +21,7 @@ const speakers = [
     company: "Nexus Real Estate Group",
     title: "Marketing Strategist",
     companyBadge: "Nexus",
-    time: "Saturday, Oct 18 • 10:00 – 10:40 AM",
+    time: "Tuesday, Apr 21 • 10:00 – 10:40 AM",
     sessionTitle: "Building a Brand That Sells: Digital Marketing for Modern Agents",
     bio: "Award-winning marketing executive with 15+ years of experience scaling real estate brands through innovative digital campaigns.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=764&h=900&fit=crop",
