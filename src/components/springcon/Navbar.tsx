@@ -38,47 +38,49 @@ export default function Navbar() {
     `text-sm font-medium transition-colors ${activeSection === id ? "text-[hsl(var(--spring-green))]" : "text-foreground hover:text-[hsl(var(--spring-green))]"}`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
-        <a href="#" className="flex-shrink-0" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/8c44e33ca3c588f7ce8beee74b8a8c76f19255de?width=728"
-            alt="LPT Realty"
-            className="h-14 w-auto"
-          />
-        </a>
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-foreground/10">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+          <a href="#" className="flex-shrink-0" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/8c44e33ca3c588f7ce8beee74b8a8c76f19255de?width=728"
+              alt="LPT Realty"
+              className="h-14 w-auto"
+            />
+          </a>
 
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          {sections.map(({ id, label }) => (
-            <a key={id} href={`#${id}`} className={linkClass(id)}>{label}</a>
-          ))}
-          <button className="px-5 py-2.5 rounded-xl text-foreground text-sm font-medium gradient-blue-purple shadow-md hover:opacity-90 transition-opacity whitespace-nowrap">
-            Apply to be a Speaker!
-          </button>
-          <button className="px-5 py-2.5 rounded-lg text-foreground text-sm font-semibold gradient-green-blue hover:opacity-90 transition-opacity whitespace-nowrap">
-            Click to Register
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {sections.map(({ id, label }) => (
+              <a key={id} href={`#${id}`} className={linkClass(id)}>{label}</a>
+            ))}
+            <button className="px-5 py-2.5 rounded-xl text-foreground text-sm font-medium gradient-blue-purple shadow-md hover:opacity-90 transition-opacity whitespace-nowrap">
+              Apply to be a Speaker!
+            </button>
+            <button className="px-5 py-2.5 rounded-lg text-foreground text-sm font-semibold gradient-green-blue hover:opacity-90 transition-opacity whitespace-nowrap">
+              Click to Register
+            </button>
+          </div>
+
+          <button className="lg:hidden text-foreground p-2 relative z-[60]" onClick={() => setMobileOpen(!mobileOpen)}>
+            <AnimatePresence mode="wait">
+              {mobileOpen ? (
+                <motion.span key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <X size={24} />
+                </motion.span>
+              ) : (
+                <motion.span key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <Menu size={24} />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </div>
-
-        <button className="lg:hidden text-foreground p-2 relative z-50" onClick={() => setMobileOpen(!mobileOpen)}>
-          <AnimatePresence mode="wait">
-            {mobileOpen ? (
-              <motion.span key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <X size={24} />
-              </motion.span>
-            ) : (
-              <motion.span key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <Menu size={24} />
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </button>
-      </div>
+      </nav>
 
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background backdrop-blur-xl border-t border-foreground/10 px-5 pt-8 pb-6 flex flex-col gap-1"
+            className="lg:hidden fixed inset-x-0 top-0 bottom-0 z-[55] bg-background pt-24 px-5 pb-6 flex flex-col gap-1"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
@@ -114,6 +116,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }
