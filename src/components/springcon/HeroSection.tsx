@@ -1,0 +1,74 @@
+export default function HeroSection() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(270deg, rgba(152,16,250,0.6) 0%, rgba(21,93,252,0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/2b15ed4b3be9f28b6ea3047c28352ec75ba7f6a0?width=1600')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-5 py-32 mt-20">
+        {/* SpringCon logo badge */}
+        <div className="mb-8 max-w-[600px] w-full px-4">
+          <div className="flex flex-col items-center">
+            <div className="flex items-center gap-3 mb-2">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/8c44e33ca3c588f7ce8beee74b8a8c76f19255de?width=728"
+                alt="LPT Realty"
+                className="h-12 md:h-16 w-auto filter brightness-0 invert"
+              />
+            </div>
+            <div className="text-center leading-none">
+              <div className="font-poppins font-bold text-[hsl(var(--spring-green))] text-2xl md:text-3xl tracking-widest uppercase">SPRING</div>
+              <div
+                className="font-poppins font-black leading-none"
+                style={{
+                  fontSize: 'clamp(80px, 18vw, 180px)',
+                  background: 'linear-gradient(135deg, #00FF91 0%, #0092FF 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  lineHeight: 1,
+                }}
+              >
+                CON
+              </div>
+              <div className="font-poppins font-black text-foreground leading-none"
+                style={{ fontSize: 'clamp(60px, 14vw, 140px)', lineHeight: 1 }}>
+                2026
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <h1 className="font-poppins font-bold text-foreground text-xl md:text-3xl lg:text-4xl tracking-wide mb-4 max-w-3xl">
+          Elevate Your Real Estate Career to New Heights
+        </h1>
+
+        {/* Date & Location */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mb-10 text-foreground/90 font-poppins font-medium text-base md:text-xl">
+          <span>October 16-17, 2025</span>
+          <span className="hidden sm:block w-px h-5 bg-foreground/40" />
+          <span>Orlando World Center Marriott</span>
+        </div>
+
+        {/* CTA Button */}
+        <a
+          href="#register"
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-xl text-foreground font-bold text-lg md:text-xl shadow-[0_4px_15px_rgba(0,146,255,0.4)] hover:opacity-90 transition-opacity gradient-green-blue"
+        >
+          Register Here <span className="text-2xl">→</span>
+        </a>
+      </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+    </section>
+  );
+}
