@@ -61,7 +61,7 @@ export default function WhyAttendSection() {
                 className="rounded-2xl overflow-hidden flex flex-row h-full"
               >
                 {/* Content - semi-transparent to show background */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center min-w-0 bg-card/60 backdrop-blur-sm">
+                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center min-w-0 bg-card/80 backdrop-blur-md">
                   <div className="w-12 h-12 rounded-xl gradient-blue-purple flex items-center justify-center mb-4">
                     <Icon className="text-foreground" size={24} />
                   </div>
