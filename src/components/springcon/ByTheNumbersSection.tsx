@@ -31,36 +31,38 @@ export default function ByTheNumbersSection() {
       style={{
         backgroundImage: `url('${byTheNumbersBg}')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center bottom',
       }}
     >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/80" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-14">
           <h2 className="font-poppins font-medium text-4xl md:text-5xl text-foreground mb-4">
             By The Numbers
           </h2>
-          <p className="font-poppins text-lg md:text-xl text-foreground/80 italic max-w-2xl mx-auto">
-            See what makes our event extraordinary
+          <p className="font-poppins text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
+            See what makes our event <em>extraordinary</em>
           </p>
-          <div className="w-56 h-px bg-foreground mx-auto mt-8" />
+          <div className="w-40 h-0.5 gradient-blue-purple mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="glass-card rounded-3xl p-8 md:p-10 flex flex-col"
+              className="glass-card rounded-2xl p-7 md:p-9 flex flex-col"
             >
-              <div className="text-5xl md:text-6xl font-bold mb-6" style={{ background: 'linear-gradient(90deg, #155DFC 0%, #9810FA 60%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <div className="text-4xl md:text-5xl font-bold mb-3" style={{ background: 'linear-gradient(90deg, #155DFC 0%, #9810FA 60%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 {stat.number}
               </div>
-              <h3 className="text-2xl md:text-3xl font-medium text-foreground/90 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">
                 {stat.label}
               </h3>
-              <p className="text-foreground/70 text-lg leading-relaxed">
+              <p className="text-foreground/60 text-sm md:text-base leading-relaxed">
                 {stat.description}
               </p>
             </div>
