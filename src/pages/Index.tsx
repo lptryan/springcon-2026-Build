@@ -55,6 +55,16 @@ export default function Index() {
         <CTASection />
       </AnimatedSection>
       <Footer />
+
+      {/* Floating Register button – mobile only */}
+      <div className="lg:hidden fixed bottom-6 left-4 right-4 z-50">
+        <a
+          href="#register"
+          className="flex items-center justify-center gap-2 w-full py-4 rounded-xl text-foreground font-bold text-base shadow-[0_4px_20px_rgba(0,0,0,0.3)] gradient-green-blue hover:opacity-90 transition-opacity"
+        >
+          Register Here <span className="text-lg">→</span>
+        </a>
+      </div>
     </div>
   );
 }
