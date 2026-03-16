@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/springcon-2026-Build/" : "/",
+  base: process.env.GITHUB_PAGES === "true" ? "/springcon-2026-Build/" : "/",
   server: {
     host: "::",
     port: 8080,
